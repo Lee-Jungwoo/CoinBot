@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import pyupbit
+import requests
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+f = open("key.txt")
+lines = f.readlines()
 
+access_key = lines[0].split()[0]
+secret_key = lines[1].split()[0]
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+upbit = pyupbit.Upbit(access_key, secret_key)
+balances = upbit.get_balances()
+print(balances)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

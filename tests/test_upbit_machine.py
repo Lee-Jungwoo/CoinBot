@@ -22,5 +22,25 @@ class UpbitMachineTestCase(unittest.TestCase):
         m = upbit_machine.UpbitMachine()
         assert m.get_wallet_status()
 
+    def test_get_upbit_api_key(self):
+        print(inspect.stack()[0][3])
+        m = upbit_machine.UpbitMachine()
+        assert m.get_upbit_api_key()
+
+    def test_get_chance_of(self):
+        print(inspect.stack()[0][3])
+        m = upbit_machine.UpbitMachine()
+        assert m.get_chance_of('KRW-BTC')
+
+    def test_get_filled_orders(self):
+        print(inspect.stack()[0][3])
+        m = upbit_machine.UpbitMachine()
+        assert m.get_filled_orders()
+
+    def test_get_unfilled_orders(self):
+        print(inspect.stack()[0][3])
+        m = upbit_machine.UpbitMachine()
+        assert m.get_unfilled_orders()
+
 
 

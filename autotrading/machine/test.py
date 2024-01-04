@@ -1,7 +1,4 @@
-import configparser
+import upbit_machine
 
-
-cfg = configparser.ConfigParser()
-cfg.read('../../conf/config.ini')
-
-print(cfg["UPBIT"]['Access_key'])
+m = upbit_machine.UpbitMachine()
+print(m.get_unfilled_orders())

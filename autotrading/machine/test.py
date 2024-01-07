@@ -1,4 +1,6 @@
 import upbit_machine
 
 m = upbit_machine.UpbitMachine()
-print(m.get_unfilled_orders())
+print(m.buy_limit_order("KRW-BTC",1,5000))
+
+

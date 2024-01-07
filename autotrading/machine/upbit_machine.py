@@ -7,6 +7,7 @@ import requests
 import pprint
 import uuid
 import jwt
+import string
 
 
 class UpbitMachine(base_machine.Machine):
@@ -157,6 +158,54 @@ class UpbitMachine(base_machine.Machine):
         pass
 
     def buy_order(self):
+        pass
+
+    def buy_limit_order(self, market, volume, price):
+        """
+        Place a limit order.
+        :param market: 시장 코드. string (req) ex) BTC-KRW
+        :param volume: 갯수. string (req)
+        :param price: 가격. string (req)
+        :return: json dictionary of response
+        """
+        url = self.BASE_URL + '/orders'
+
+        if type(volume) is not str or type(price) is not str:
+            raise ValueError('parameters must be a string')
+
+        params = {
+            'market': market,
+            'side': 'bid',
+            'ord_type': 'limit',
+            'price': price,
+            'volume': volume
+        }
+
+        headers = self.__get_jwt_header(params)
+        response = requests.post(url, json=params, headers=headers)
+        return response.json()
+
+    def buy_market_order(self, market, price):
+        """
+        Place a market order.
+        :param market: 시장 코드. string (req) ex) BTC-KRW
+        :param volume: 갯수. string (req)
+        :param price: 가격. string (req)
+        :return: json dictionary of response
+        """
+        url = self.BASE_URL + '/orders'
+
+        params = {
+            'market': market,
+            'side': 'bid',
+            'ord_type': 'price',
+            'price': price,
+            'volume': None
+        }
+
+        headers = self.__get_jwt_header(params)
+        response = requests.post(url, json=params, headers=headers)
+        return response.json()
         pass
 
     def sell_order(self):

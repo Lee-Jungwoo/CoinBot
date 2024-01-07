@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7ea7d2-74d8-40d8-9647-8f5c6faa9f25" name="Changes" comment="discard upbit, jupyter 설치ed">
+    <list default="true" id="8b7ea7d2-74d8-40d8-9647-8f5c6faa9f25" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrading/machine/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrading/machine/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrading/machine/upbit_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrading/machine/upbit_machine.py" afterDir="false" />
@@ -178,7 +178,7 @@
       <workItem from="1703591283685" duration="33392000" />
       <workItem from="1703940712637" duration="1415000" />
       <workItem from="1703942140707" duration="45000" />
-      <workItem from="1703942191101" duration="24556000" />
+      <workItem from="1703942191101" duration="33264000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -204,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703764543295</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <option name="closed" value="true" />
+      <created>1704384508097</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704384508097</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +233,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="discard upbit, jupyter 설치ed" />
-    <option name="LAST_COMMIT_MESSAGE" value="discard upbit, jupyter 설치ed" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CoinBot$test_upbit_machine.coverage" NAME="test_upbit_machine Coverage Results" MODIFIED="1703786963042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -233,6 +242,6 @@
     <SUITE FILE_PATH="coverage/CoinBot$upbit_machine.coverage" NAME="upbit_machine Coverage Results" MODIFIED="1704278439915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
     <SUITE FILE_PATH="coverage/CoinBot$.coverage" NAME=" Coverage Results" MODIFIED="1704280032037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/CoinBot$Upbit_firstTry.coverage" NAME="Upbit_firstTry Coverage Results" MODIFIED="1704168900737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinBot$test.coverage" NAME="test Coverage Results" MODIFIED="1704280157622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
+    <SUITE FILE_PATH="coverage/CoinBot$test.coverage" NAME="test Coverage Results" MODIFIED="1704465620072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
   </component>
 </project>

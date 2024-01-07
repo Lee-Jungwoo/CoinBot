@@ -42,5 +42,11 @@ class UpbitMachineTestCase(unittest.TestCase):
         m = upbit_machine.UpbitMachine()
         assert m.get_unfilled_orders()
 
+    def test_buy_limit_order(self):
+        print(inspect.stack()[0][3])
+        print("buying cannot be tested.")
 
+    def test_buy_market_order(self):
+        print(inspect.stack()[0][3])
+        print("buying cannot be tested.")
 

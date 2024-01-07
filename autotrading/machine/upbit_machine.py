@@ -163,15 +163,15 @@ class UpbitMachine(base_machine.Machine):
     def buy_limit_order(self, market, volume, price):
         """
         Place a limit order.
-        :param market: 시장 코드. string (req) ex) BTC-KRW
-        :param volume: 갯수. string (req)
-        :param price: 가격. string (req)
+        :param market: (필수)시장 코드. ex) BTC-KRW
+        :param volume: (필수)갯수.  (req)
+        :param price: (필수)가격.  (req)
         :return: json dictionary of response
         """
         url = self.BASE_URL + '/orders'
 
-        if type(volume) is not str or type(price) is not str:
-            raise ValueError('parameters must be a string')
+        # if type(volume) is not str or type(price) is not str:
+        #     raise ValueError('parameters must be a string')
 
         params = {
             'market': market,
@@ -185,15 +185,17 @@ class UpbitMachine(base_machine.Machine):
         response = requests.post(url, json=params, headers=headers)
         return response.json()
 
-    def buy_market_order(self, market, price):
+    def buy_price_order(self, market, price):
         """
-        Place a market order.
+        Place a buy price order.
         :param market: 시장 코드. string (req) ex) BTC-KRW
-        :param volume: 갯수. string (req)
         :param price: 가격. string (req)
         :return: json dictionary of response
         """
         url = self.BASE_URL + '/orders'
+
+        if type(price) is not str:
+            raise ValueError('parameters must be a string')
 
         params = {
             'market': market,
@@ -206,13 +208,75 @@ class UpbitMachine(base_machine.Machine):
         headers = self.__get_jwt_header(params)
         response = requests.post(url, json=params, headers=headers)
         return response.json()
-        pass
 
     def sell_order(self):
         pass
 
-    def cancel_order(self):
-        pass
+    def sell_limit_order(self, market, price, volume):
+        """
+        Place a sell limit order.
+        :param market: (필수)시장 코드. ex) BTC-KRW
+        :param volume: (필수)갯수.  (req)
+        :param price: (필수)가격.  (req)
+        :return: json dictionary of response
+        """
+        url = self.BASE_URL + '/orders'
+
+        # if type(volume) is not str or type(price) is not str:
+        #     raise ValueError('parameters must be a string')
+
+        params = {
+            'market': market,
+            'side': 'ask',
+            'ord_type': 'limit',
+            'price': price,
+            'volume': volume
+        }
+
+        headers = self.__get_jwt_header(params)
+        response = requests.post(url, json=params, headers=headers)
+        return response.json()
+
+    def sell_market_order(self, market, volume):
+        """
+        Place a sell market order.
+        :param market: (필수)시장 코드. ex) BTC-KRW
+        :param volume: (필수)수량.  (req)
+        :return: json dictionary of response
+        """
+        url = self.BASE_URL + '/orders'
+
+        # if type(volume) is not str or type(price) is not str:
+        #     raise ValueError('parameters must be a string')
+
+        params = {
+            'market': market,
+            'side': 'ask',
+            'ord_type': 'market',
+            'price': None,
+            'volume': volume
+        }
+
+        headers = self.__get_jwt_header(params)
+        response = requests.post(url, json=params, headers=headers)
+        return response.json()
+
+    def cancel_order(self, order_uuid):
+        """
+        cancel order.
+
+
+        :param order_uuid: uuid of the order.
+        :return: json dictionary of response.
+        """
+        url = self.BASE_URL + '/order'
+
+        params = {
+            'uuid': order_uuid
+        }
+
+        headers = self.__get_jwt_header(params)
+        response = requests.delete(url, data=params, headers=headers)
 
     def get_my_order_status(self):
         pass

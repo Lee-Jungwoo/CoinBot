@@ -50,3 +50,11 @@ class UpbitMachineTestCase(unittest.TestCase):
         print(inspect.stack()[0][3])
         print("buying cannot be tested.")
 
+    def test_sell_market_order(self):
+        print(inspect.stack()[0][3])
+        print("selling cannot be tested.")
+
+    def test_sell_limit_order(self):
+        print(inspect.stack()[0][3])
+        print("selling cannot be tested.")
+

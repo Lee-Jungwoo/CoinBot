@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b7ea7d2-74d8-40d8-9647-8f5c6faa9f25" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrading/machine/base_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrading/machine/base_machine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrading/machine/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrading/machine/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrading/machine/upbit_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrading/machine/upbit_machine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_upbit_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upbit_machine.py" afterDir="false" />
@@ -65,7 +66,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -178,7 +179,8 @@
       <workItem from="1703591283685" duration="33392000" />
       <workItem from="1703940712637" duration="1415000" />
       <workItem from="1703942140707" duration="45000" />
-      <workItem from="1703942191101" duration="33264000" />
+      <workItem from="1703942191101" duration="33285000" />
+      <workItem from="1704616952171" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -242,6 +244,6 @@
     <SUITE FILE_PATH="coverage/CoinBot$upbit_machine.coverage" NAME="upbit_machine Coverage Results" MODIFIED="1704278439915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
     <SUITE FILE_PATH="coverage/CoinBot$.coverage" NAME=" Coverage Results" MODIFIED="1704280032037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/CoinBot$Upbit_firstTry.coverage" NAME="Upbit_firstTry Coverage Results" MODIFIED="1704168900737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinBot$test.coverage" NAME="test Coverage Results" MODIFIED="1704465620072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
+    <SUITE FILE_PATH="coverage/CoinBot$test.coverage" NAME="test Coverage Results" MODIFIED="1704621886478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autotrading/machine" />
   </component>
 </project>

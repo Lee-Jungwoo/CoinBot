@@ -1,6 +1,5 @@
 import upbit_machine
+import pprint
 
 m = upbit_machine.UpbitMachine()
-print(m.buy_limit_order("KRW-BTC",1,5000))
-
-
+pprint.pprint(m.get_unfilled_orders())

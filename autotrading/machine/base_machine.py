@@ -35,7 +35,7 @@ class Machine(ABC):
         pass
 
     @abstractmethod
-    def cancel_order(self):
+    def cancel_order(self, order_uuid):
         pass
 
     @abstractmethod

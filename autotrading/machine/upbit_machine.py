@@ -1,7 +1,6 @@
 import configparser
 import hashlib
 from urllib.parse import urlencode
-
 import autotrading.machine.base_machine as base_machine
 import requests
 import pprint
@@ -9,6 +8,8 @@ import uuid
 import jwt
 import string
 
+
+CONFIGPATH = '/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini'
 
 class UpbitMachine(base_machine.Machine):
     BASE_URL = "https://api.upbit.com/v1"
@@ -18,7 +19,7 @@ class UpbitMachine(base_machine.Machine):
 
     def __init__(self):
         cfg = configparser.ConfigParser()
-        cfg.read('/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini')
+        cfg.read(CONFIGPATH)
         self.ACCESS_KEY = cfg['UPBIT']['Access_key']
         self.SECRET_KEY = cfg['UPBIT']['Secret_key']
 

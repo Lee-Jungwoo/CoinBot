@@ -1,6 +1,7 @@
 from pymongo import MongoClient
+from pymongo import cursor
 import configparser
-import pprint
+from pprint import pprint as p
 import autotrading.db.DBHandler as DBHandler
 
 CONFIGPATH = '/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini'
@@ -112,7 +113,7 @@ class MongoDBHandler(DBHandler.DBHandler):
         if collection.insert_many(items).acknowledged:
             print("inserted {} record(s) to db.".format(len(items)))
 
-    def delete_one(self, db_name, collection_name, filter_dic):
+    def delete_item(self, db_name, collection_name, filter_dic):
         """
         여러 개를 찾으면 처음 find 하나만 지움
         :param db_name:
@@ -129,11 +130,11 @@ class MongoDBHandler(DBHandler.DBHandler):
 
         result = collection.delete_one(filter_dic)
         if result.acknowledged:
-            print("deleted 1 record.")
+            print("deleted {} record.".format(result.deleted_count))
 
         return result.deleted_count
 
-    def delete_many(self, db_name, collection_name, filter_dic):
+    def delete_items(self, db_name, collection_name, filter_dic):
         """
         맞는거 다 지움
         :param db_name:
@@ -155,5 +156,36 @@ class MongoDBHandler(DBHandler.DBHandler):
 
         return result.deleted_count
 
+    def find_item(self, db_name, collection_name, filter_dic):
+        """
+        맞는것중 하나만 찾음
+        :param db_name: string
+        :param collection_name: string
+        :param filter_dic: filter dictionary
+        :return: dictionary of the result record(document in this case)
+        """
 
-    def
+        db = self._client[db_name]
+        collection = db[collection_name]
+
+        #
+        # if filter_dic is None or filter_dic == {}:
+        #     raise TypeError("filter_dic must not be none.")
+
+        result = collection.find_one(filter_dic, projection={"_id": False})
+        return result
+
+    def find_items(self, db_name, collection_name, filter_dic):
+        """
+        다 찾아서 리턴
+        :param db_name:
+        :param collection_name:
+        :param filter_dic:
+        :return:
+        """
+        db = self._client[db_name]
+        collection = db[collection_name]
+
+        result = collection.find(filter=filter_dic, projection={"_id": False}, cursor_type = cursor.CursorType.EXHAUST)
+
+        return result

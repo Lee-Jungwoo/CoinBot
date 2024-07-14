@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pymongo import cursor
 import configparser
-from pprint import pprint as p
+from pprint import pprint as pp
 import autotrading.db.DBHandler as DBHandler
 
 CONFIGPATH = '/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini'
@@ -21,7 +21,8 @@ class MongoDBHandler(DBHandler.DBHandler):
         """
         p = configparser.ConfigParser()
         p.read(CONFIGPATH)
-
+     
+        
         local_ip = p['MONGODB']['local_ip']
         port = p['MONGODB']['port']
 

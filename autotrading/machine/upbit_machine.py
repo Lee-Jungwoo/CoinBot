@@ -7,9 +7,13 @@ import pprint
 import uuid
 import jwt
 import string
+import platform
 
-
-CONFIGPATH = '/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini'
+CONFIGPATH = 'yeah'
+if platform.system() == 'Windows':
+    CONFIGPATH = 'c:/Users/USER/Desktop/dev/CoinBot/conf/config.ini'
+elif platform.system() == 'Darwin':
+    CONFIGPATH = '/Users/ijeong-u/PycharmProjects/CoinBot/conf/config.ini'
 
 class UpbitMachine(base_machine.Machine):
     BASE_URL = "https://api.upbit.com/v1"
